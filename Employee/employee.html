@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="employee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!--header-->
+    <div class="topnav" id="myTopnav">
+        <a href="#Home">Home</a>
+        <a href="#Companies">Companies</a>
+        <a href="#Trainings">Trainings</a>
+        <a href="#Blog">Blog</a>
+        <a href="#CV">CV</a>
+        <a href="#Contact">Contact</a>
+        <a href="#Jobs" class="active">Jobs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <!--header-end-->
+
+
+
+
+
+    <div class="container">
+    <div class="profile-card">
+        <div class="profile-pic">
+            <img src="./user.jpeg" alt="User avatar" class="image" id="profileImage">
+        </div>
+        <input type="file" id="profileImageInput" style="display: none;" onchange="handleProfileImageUpload(event)">
+        <div class="edit-save-buttons">
+            <button onclick="editProfileImage()">Edit Profile Image</button>
+        </div>
+        <div class="profile-details">
+            <div class="intro">
+                <h2 id="companyName">Monalisa Asley</h2>
+                <div class="edit-save-buttons">
+                    <button onclick="editCompanyName()"><i class="fas fa-edit"></i> Edit</button>
+                    <button onclick="saveCompanyName()"><i class="fas fa-save"></i> Save</button>
+                </div>
+                <span id="designerTitle"><h4>UI/UX Designer</h4></span>
+                <div class="edit-save-buttons">
+                    <button onclick="editDesignerTitle()"><i class="fas fa-edit"></i> Edit</button>
+                    <button onclick="saveDesignerTitle()"><i class="fas fa-save"></i> Save</button>
+                </div>
+                <input type="text" id="companyNameInput" style="display: none;">
+                <input type="text" id="designerTitleInput" style="display: none;">
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook" style="color:var(--blue)"></i></a>
+                    <a href="#"><i class="fab fa-twitter" style="color:var(--skyblue)"></i></a>
+                    <a href="#"><i class="fab fa-linkedin" style="color:var(--light-blue)"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <div class="row">
+                    <div class="icon">
+                        <i class="fa fa-phone" style="color:var(--dark-magenta)"></i>
+                    </div>
+                    <div class="content">
+                        <span id="phone">Phone</span>
+                        <h5 id="phoneNumber">+374567848</h5>
+                        <input type="text" id="phoneInput" style="display: none;">
+                        <div class="edit-save-buttons">
+                            <button onclick="editPhone('phone')"><i class="fas fa-edit"></i> Edit</button>
+                            <button onclick="savePhone('phone')"><i class="fas fa-save"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon">
+                        <i class="fa fa-envelope-open" style="color:var(--light-green)"></i>
+                    </div>
+                    <div class="content">
+                        <span id="email">Email</span>
+                        <h5 id="emailAddress">example@gmail.com</h5>
+                        <input type="text" id="emailInput" style="display: none;">
+                        <div class="edit-save-buttons">
+                            <button onclick="editField('email')"><i class="fas fa-edit"></i> Edit</button>
+                            <button onclick="saveField('email')"><i class="fas fa-save"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon">
+                        <i class="fa fa-map-marker" style="color:var(--light-purple)"></i>
+                    </div>
+                    <div class="content">
+                        <span id="location">Location</span>
+                        <h5 id="locationAddress">Armenia</h5>
+                        <input type="text" id="locationInput" style="display: none;">
+                        <div class="edit-save-buttons">
+                            <button onclick="editLocation()"><i class="fas fa-edit"></i> Edit</button>
+                            <button onclick="saveLocation()"><i class="fas fa-save"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="download-btn"></i>Create CV</button>
+            <button class="download-btn"></i>Applied Jobs</button>
+        </div>
+    </div>
+    <!-------about section-------->
+    <div class="about">
+        <h1>About me</h1>
+        <p id="aboutText">
+            I am a passionate UI/UX designer with a strong background in creating intuitive, user-friendly interfaces for web and mobile applications. With a keen eye for detail and a deep understanding of user behavior, I strive to craft engaging digital experiences that delight users and exceed business objectives.
+             I specialize in creating visually stunning interfaces that are both aesthetically pleasing and functional. From wireframes to high-fidelity mockups, I focus on delivering designs that enhance the overall user experience.
+        </p>
+        <div class="edit-save-buttons">
+            <button onclick="editAbout()"><i class="fas fa-edit"></i> Edit</button>
+            <button onclick="saveAbout()"><i class="fas fa-save"></i> Save</button>
+        </div>
+        <h2>What I Do !!!</h2>
+        <div class="work">
+            <div class="workbox">
+                <div class="icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="desc">
+                    <h3>UI/UX Designer</h3>
+                    <p id="uiuxDesignerText">
+                         I am proficient in conducting user research, including user interviews, surveys, and usability testing, to gain valuable insights into user needs and preferences. By leveraging these insights, I ensure that my designs are tailored to meet the needs of the target audience.
+                    </p>
+                    <div class="edit-save-buttons">
+                        <button onclick="editUIUXDesigner()"><i class="fas fa-edit"></i> Edit</button>
+                        <button onclick="editUIUXDesigner()"><i class="fas fa-save"></i> Save</button>
+                </div>
+                </div>
+            </div>
+             <div class="workbox">
+                <div class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="desc">
+                    <h3>App Development</h3>
+                    <p id="appDevelopmentText">
+                         I am proficient in conducting user research, including user interviews, surveys, and usability testing, to gain valuable insights into user needs and preferences. By leveraging these insights, I ensure that my designs are tailored to meet the needs of the target audience.
+                    </p>
+                    <div class="edit-save-buttons">
+                        <button onclick="editAppDevelopment()"><i class="fas fa-edit"></i> Edit</button>
+                        <button onclick="editAppDevelopment()"><i class="fas fa-save"></i> Save</button>
+                </div>
+                </div>
+            </div>
+            <div class="workbox">
+                <div class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="desc">
+                    <h3>API Development</h3>
+                    <p id="apiDevelopmentText">
+                         I am proficient in conducting user research, including user interviews, surveys, and usability testing, to gain valuable insights into user needs and preferences. By leveraging these insights, I ensure that my designs are tailored to meet the needs of the target audience.
+                    </p>
+                    <div class="edit-save-buttons">
+                    <button onclick="editAPIDevelopment()"><i class="fas fa-edit"></i> Edit</button>
+                    <button onclick="editAPIDevelopment()"><i class="fas fa-save"></i> Save</button>
+                </div>
+                </div>
+            </div>
+            <div class="workbox">
+                <div class="icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="desc">
+                    <h3>Web Development</h3>
+                    <p id="webDevelopmentText">
+                         I am proficient in conducting user research, including user interviews, surveys, and usability testing, to gain valuable insights into user needs and preferences. By leveraging these insights, I ensure that my designs are tailored to meet the needs of the target audience.
+                    </p>
+                    <div class="edit-save-buttons">
+                    <button onclick="editWebDevelopment()"><i class="fas fa-edit"></i> Edit</button>
+                    <button onclick="editWebDevelopment()"><i class="fas fa-save"></i> Save</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--footer-->
+    <div class="contain">
+    </div>
+    <footer>
+      <div class="contain">
+        <div class="footer_content">
+          <div class="first_section">
+            <h3 class="footer_headings">About Us</h3>
+            <img src="images/logo-1.png" alt="" />
+            <p>
+              A job portal is a website where people who need jobs can find jobs and companies looking for job seekers can find the perfect employees. It serves as a medium where job seekers can create profiles, upload resumes, and search for job openings across various industries and locations.
+            </p>
+            <div class="social_icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-pinterest"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+
+          <div class="second_section">
+            <h3 class="footer_headings">Useful links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Companies</a></li>
+              <li><a href="#">Trainings</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="third_section">
+            <h3 class="footer_headings">Address</h3>
+            <ul>
+              <li>
+                <i class="fa fa-envelope"></i>
+                <span>relab@gmail.com</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Azatutyun 23/24</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <span>+374 99 99-99-99</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="fourth_section">
+            <h3 class="footer_headings">Newsletter</h3>
+            <p>Subscribing to the right email newsletter can deliver the information you need. Done well, an email newsletter with a purpose is like a trusted source helping you cut through the clutter.</p>
+            <form action="#">
+              <div class="form_control">
+                <input type="text" placeholder="Enter an Email" required />
+              </div>
+              <button type="button">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_txt">
+        <p>
+          All rights reservered by
+          <a href="https://www.onlineittuts.com">RELAB</a> &copy; 2024.
+        </p>
+      </div>
+    </footer>
+
+    <!--footer-end-->
+
+    <script src="employee.js"></script>
+</body>
+</html>
